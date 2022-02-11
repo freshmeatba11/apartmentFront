@@ -1,5 +1,10 @@
 import { Routes, Route } from "react-router-dom";
-import { Nav, HomeComponent, NotMatchComponent } from "./components";
+import {
+  Nav,
+  HomeComponent,
+  RoomPageComponent,
+  NotMatchComponent,
+} from "./components";
 
 function App() {
   return (
@@ -7,6 +12,7 @@ function App() {
       <Nav />
       <Routes>
         <Route path={"/"} element={<HomeComponent />}></Route>
+        <Route path={"room"} element={<RoomPageComponent />}></Route>
         <Route path={"*"} element={<NotMatchComponent />}></Route>
       </Routes>
     </div>
