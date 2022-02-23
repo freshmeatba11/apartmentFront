@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import testPic from "../assets/images/testHome01.jpg";
+import { imageList } from "../assets/images";
 
 function Card({ imageSource, route }) {
   return (
@@ -26,7 +27,7 @@ export const RoomPageComponent = () => {
   return (
     <div className="">
       <div className="pl-36 py-10">
-        <p className="text-xl text-gray-400">Room /</p>
+        <p className="text-xl text-stone-600">Room /</p>
       </div>
       <div
         className={clsx(
@@ -34,10 +35,10 @@ export const RoomPageComponent = () => {
           "grid grid-cols-2 grid-rows-2 gap-6 justify-items-center"
         )}
       >
-        <Card imageSource={testPic} route="/room/a" />
-        <Card imageSource={testPic} route="/room/b" />
-        <Card imageSource={testPic} route="/room/c" />
-        <Card imageSource={testPic} route="/room/d" />
+        <Card imageSource={imageList.a[0]} route="/room/a" />
+        <Card imageSource={imageList.b[0]} route="/room/b" />
+        <Card imageSource={imageList.c[1]} route="/room/c" />
+        <Card imageSource={imageList.d[0]} route="/room/d" />
       </div>
     </div>
   );

@@ -1,3 +1,24 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  @apply bg-amber-100 bg-opacity-50;
+}
+
+.active {
+  @apply text-stone-100 text-opacity-95 underline underline-offset-4;
+}
+
+.fade-anim img {
+  animation: fadeAnim 0.5s ease-in;
+}
+
+@keyframes fadeAnim {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
