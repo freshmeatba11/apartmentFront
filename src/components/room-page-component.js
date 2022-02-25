@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
-import testPic from "../assets/images/testHome01.jpg";
 import { imageList } from "../assets/images";
+import TitleComponent from "./title-component";
 
 function Card({ imageSource, route }) {
   return (
@@ -26,9 +26,7 @@ function Card({ imageSource, route }) {
 export const RoomPageComponent = () => {
   return (
     <div className="">
-      <div className="pl-36 py-10">
-        <p className="text-xl text-stone-600">Room /</p>
-      </div>
+      <TitleComponent text="Room /" />
       <div
         className={clsx(
           "w-4/5 px-10 pb-10 m-auto",

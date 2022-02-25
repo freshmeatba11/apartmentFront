@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import TitleComponent from "./title-component";
 import ImageSwitchComponent from "./image-switch-component";
 import { imageList } from "../assets/images";
 
@@ -27,10 +28,7 @@ export const RoomDetailPageComponent = () => {
 
   return (
     <>
-      <div className="pl-36 py-10">
-        <p className="text-xl text-stone-600">{`Room ${currentRoom} 室內空間 /`}</p>
-      </div>
-
+      <TitleComponent text={`Room ${currentRoom} 室內空間 /`} />
       <ImageSwitchComponent images={featuredImages} />
       <div className="w-full h-12"></div>
     </>

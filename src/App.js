@@ -4,6 +4,8 @@ import {
   HomeComponent,
   RoomPageComponent,
   RoomDetailPageComponent,
+  SpacePageComponent,
+  // InfoPageComponent,
   NotMatchComponent,
 } from "./components";
 
@@ -18,6 +20,8 @@ function App() {
           path={"/room/:roomNumber"}
           element={<RoomDetailPageComponent />}
         ></Route>
+        <Route path={"/space"} element={<SpacePageComponent />}></Route>
+        {/* <Route path={"/info"} element={<InfoPageComponent />}></Route> */}
         <Route path={"*"} element={<NotMatchComponent />}></Route>
       </Routes>
     </div>
