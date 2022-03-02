@@ -5,7 +5,9 @@ import {
   RoomPageComponent,
   RoomDetailPageComponent,
   SpacePageComponent,
-  // InfoPageComponent,
+  InfoPageComponent,
+  RecyclePageComponent,
+  InstructionsPageComponent,
   NotMatchComponent,
 } from "./components";
 
@@ -21,7 +23,15 @@ function App() {
           element={<RoomDetailPageComponent />}
         ></Route>
         <Route path={"/space"} element={<SpacePageComponent />}></Route>
-        {/* <Route path={"/info"} element={<InfoPageComponent />}></Route> */}
+        <Route path={"/info"} element={<InfoPageComponent />}></Route>
+        <Route
+          path={"/info/recycle"}
+          element={<RecyclePageComponent />}
+        ></Route>
+        <Route
+          path={"/info/instructions"}
+          element={<InstructionsPageComponent />}
+        ></Route>
         <Route path={"*"} element={<NotMatchComponent />}></Route>
       </Routes>
     </div>

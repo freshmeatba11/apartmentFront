@@ -17,6 +17,13 @@ body {
   @apply bg-amber-100 bg-opacity-50;
 }
 
+.infoPage {
+  background-image: url("./assets/images/info.JPG");
+  @apply bg-no-repeat bg-center bg-blend-multiply bg-neutral-900/50
+        h-screen pb-4
+        overflow-y-scroll;
+}
+
 .active {
   @apply text-stone-100 text-opacity-95 underline underline-offset-4;
 }
