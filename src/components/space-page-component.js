@@ -8,7 +8,7 @@ export const SpacePageComponent = () => {
 
   return (
     <>
-      <TitleComponent text="Space 公共空間 /" />
+      <TitleComponent text="公共空間" text02=" Space /" />
       <ImageSwitchComponent images={featuredImages} />
       <div className="w-full h-12"></div>
     </>

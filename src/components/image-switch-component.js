@@ -29,32 +29,35 @@ const ImageSwitchComponent = ({ images }) => {
     return (
       <button
         className={clsx(
-          "px-4 py-2 text-gray-700 text-opacity-75 bg-amber-900 bg-opacity-25 rounded",
+          "w-1/4 px-4 pb-3 bg-amber-900 bg-opacity-25 rounded-lg",
+          "text-4xl font-black text-stone-700 text-opacity-75",
+          "transition-all duration-300",
           "hover:text-stone-100 hover:bg-opacity-60",
-          "before:block before:w-8 before:h-0.5 before:bg-lime-600 before:absolute before:top-7",
-          "transition-all duration-300"
+
+          "absolute top-full translate-y-1/2",
+          direction === "previous" ? "left-0 translate-x-1/2" : "",
+          direction === "next" ? "right-0 -translate-x-1/2" : "",
+          "lg:static lg:h-full lg:w-auto lg:translate-x-0 lg:translate-y-0"
         )}
         onClick={handler}
       >
-        {direction}
+        {direction === "previous" ? <span>&#10229;</span> : ""}
+        {direction === "next" ? <span>&#10230;</span> : ""}
       </button>
     );
   };
 
   return (
-    <div className="max-w-screen-xl w-4/5 mx-auto">
+    <div className="max-w-screen-xl w-11/12 mx-auto">
       <div ref={slideRef} className="w-full relative select-none">
-        <div className="aspect-video">
+        <div className="aspect-video flex justify-center relative">
+          <SwitchButton direction="previous" handler={handleOnPrevClick} />
           <img
             src={images[currentIndex]}
-            className="max-w-full rounded max-h-[95vh] mx-auto brightness-110"
+            className="max-w-full rounded-lg max-h-[95vh] brightness-110"
             alt=""
           />
-        </div>
-
-        <div className="absolute w-full top-1/2 transform -translate-y-1/2 flex justify-between items-start px-8">
-          <SwitchButton direction="Prev" handler={handleOnPrevClick} />
-          <SwitchButton direction="Next" handler={handleOnNextClick} />
+          <SwitchButton direction="next" handler={handleOnNextClick} />
         </div>
       </div>
     </div>

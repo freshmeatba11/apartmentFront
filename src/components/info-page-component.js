@@ -25,13 +25,7 @@ const Card = ({ text01, text02, path }) => {
 
 export const InfoPageComponent = () => {
   return (
-    <div
-      className={clsx(
-        "infoPage bg-no-repeat bg-center",
-        "h-screen bg-blend-multiply bg-neutral-900/50",
-        "overflow-y-scroll"
-      )}
-    >
+    <div className="infoPage">
       <TitleComponent
         text="更多資訊"
         text02=" More Info /"
