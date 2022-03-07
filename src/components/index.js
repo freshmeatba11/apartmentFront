@@ -7,3 +7,6 @@ export * from "./space-page-component";
 export * from "./info-page-component";
 export * from "./recycle-page-component";
 export * from "./instructions-page-component";
+// export * from "./utility-bill-page-component";
+export * from "./login-page-component";
+export * from "./signup-page-component";

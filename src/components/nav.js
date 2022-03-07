@@ -1,6 +1,7 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
+import AuthService from "../services/auth.service";
 
 import Logo from "../assets/images/logo.png";
 
@@ -10,10 +11,9 @@ const NavLiComponent = ({ to, text }) => {
       <NavLink
         to={to}
         className={clsx(
-          "text-xl text-stone-100 text-opacity-75 ",
+          "text-xl text-stone-100 text-opacity-75 tracking-[.1em]",
           "hover:text-opacity-100",
-          "transition-all duration-300",
-          "tracking-[.1em]"
+          "transition-all duration-300"
         )}
       >
         {text}
@@ -22,7 +22,15 @@ const NavLiComponent = ({ to, text }) => {
   );
 };
 
-export const Nav = () => {
+export const Nav = ({ currentUser, setCurrentUser }) => {
+  const navigate = useNavigate();
+
+  const logoutHandler = () => {
+    AuthService.logout();
+    setCurrentUser(null);
+    window.alert("Logout successfully, now you are redirect to the homepage.");
+    navigate("/");
+  };
   return (
     <div
       className={clsx(
@@ -38,9 +46,31 @@ export const Nav = () => {
         <NavLiComponent to="/room" text="Room" />
         <NavLiComponent to="/space" text="Space" />
         <NavLiComponent to="/info" text="Info" />
-        <NavLiComponent to="/utility" text="Utility Bill" />
-        <NavLiComponent to="/notification" text="Notification" />
-        <NavLiComponent to="/reservation" text="Reservation" />
+        {currentUser && (
+          <>
+            <NavLiComponent to="/utility" text="Utility Bill" />
+            <NavLiComponent to="/notification" text="Notification" />
+          </>
+        )}
+        {!currentUser && (
+          <>
+            <NavLiComponent to="/reservation" text="Reservation" />
+            <NavLiComponent to="/login" text="Login" />
+            <NavLiComponent to="/signup" text="Sign Up" />
+          </>
+        )}
+        {currentUser && (
+          <li
+            className={clsx(
+              "text-xl text-stone-100 text-opacity-75 tracking-[.1em] cursor-pointer",
+              "hover:text-opacity-100",
+              "transition-all duration-300"
+            )}
+            onClick={logoutHandler}
+          >
+            Logout
+          </li>
+        )}
       </ul>
     </div>
   );
