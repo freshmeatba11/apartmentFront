@@ -43,10 +43,10 @@ export const SignupPageComponent = () => {
 
       <div
         className={clsx(
-          "w-[80%] p-6 mx-auto bg-gray-700/40 rounded-lg",
+          "w-[80%] p-6 mx-auto bg-black/40 rounded-lg",
           "text-white",
-          "flex flex-col gap-3",
-          "lg:w-1/2"
+          "flex flex-col gap-6",
+          "lg:w-1/2 xl:w-2/5 2xl:w-1/3"
         )}
       >
         <div className="flex flex-col gap-1">
@@ -54,7 +54,7 @@ export const SignupPageComponent = () => {
             User Name :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="bg-black/90 py-1 px-3 rounded"
             id="username"
             type="text"
             onChange={handleChangeUsername}
@@ -65,7 +65,7 @@ export const SignupPageComponent = () => {
             Email :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="bg-black/90 py-1 px-3 rounded"
             id="email"
             type="email"
             onChange={handleChangeEmail}
@@ -76,7 +76,7 @@ export const SignupPageComponent = () => {
             Password :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="bg-black/90 py-1 px-3 rounded"
             id="password"
             type="text"
             onChange={handleChangePassword}
@@ -87,7 +87,7 @@ export const SignupPageComponent = () => {
             Role :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="bg-black/90 py-1 px-3 rounded"
             id="role"
             type="text"
             placeholder="Roommate"

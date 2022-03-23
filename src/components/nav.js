@@ -24,7 +24,6 @@ const NavLiComponent = ({ to, text }) => {
 
 export const Nav = ({ currentUser, setCurrentUser }) => {
   const navigate = useNavigate();
-
   const logoutHandler = () => {
     AuthService.logout();
     setCurrentUser(null);
@@ -34,9 +33,10 @@ export const Nav = ({ currentUser, setCurrentUser }) => {
   return (
     <div
       className={clsx(
-        "bg-amber-900 bg-opacity-75 shadow-md",
+        "bg-[#9B826B] shadow-md",
         "px-4 py-4",
-        "flex items-center"
+        "flex items-center",
+        "sticky top-0 z-50"
       )}
     >
       <div>
@@ -46,12 +46,6 @@ export const Nav = ({ currentUser, setCurrentUser }) => {
         <NavLiComponent to="/room" text="Room" />
         <NavLiComponent to="/space" text="Space" />
         <NavLiComponent to="/info" text="Info" />
-        {currentUser && (
-          <>
-            <NavLiComponent to="/utility" text="Utility Bill" />
-            <NavLiComponent to="/notification" text="Notification" />
-          </>
-        )}
         {!currentUser && (
           <>
             <NavLiComponent to="/reservation" text="Reservation" />

@@ -52,43 +52,61 @@ export const RecyclePageComponent = () => {
           "lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-3 lg:gap-8"
         )}
       >
-        {Schedule.map((route) => {
+        {Schedule.map((route, i) => {
           return (
-            <div className={clsx("w-[393px] mx-auto")}>
+            <div className={clsx("w-[393px] mx-auto")} key={i}>
               <div className={clsx("text-white py-1")}>
                 {route.time + " " + route.name}
               </div>
               <table className="text-white border ">
-                <tr className="border">
-                  <th className="border w-12 "></th>
-                  <th className="border w-12 ">Mon.</th>
-                  <th className="border w-12 ">Tue.</th>
-                  <th className="border w-12 ">Wed.</th>
-                  <th className="border w-12 ">Thu.</th>
-                  <th className="border w-12 ">Fri.</th>
-                  <th className="border w-12 ">Sat.</th>
-                  <th className="border w-12 ">Sun.</th>
-                </tr>
-                <tr className="border">
-                  <td className="border px-4">
-                    <img src={BinIcon} className="w-4 h-4" alt="" />
-                  </td>
-                  {route.trash.map((trash) => {
-                    if (trash === "O")
-                      return <td className="border px-4">&#9711;</td>;
-                    if (trash === "X")
-                      return <td className="border px-4">&#9587;</td>;
-                  })}
-                </tr>
-                <tr>
-                  <td className="border px-4">&#9851;</td>
-                  {route.recycle.map((recycle) => {
-                    if (recycle === "X")
-                      return <td className="border px-4">&#9587;</td>;
-                    if (recycle !== "X")
-                      return <td className="border px-1">{recycle}</td>;
-                  })}
-                </tr>
+                <tbody>
+                  <tr className="border">
+                    <th className="border w-12 "></th>
+                    <th className="border w-12 ">Mon.</th>
+                    <th className="border w-12 ">Tue.</th>
+                    <th className="border w-12 ">Wed.</th>
+                    <th className="border w-12 ">Thu.</th>
+                    <th className="border w-12 ">Fri.</th>
+                    <th className="border w-12 ">Sat.</th>
+                    <th className="border w-12 ">Sun.</th>
+                  </tr>
+                  <tr className="border">
+                    <td className="border px-4">
+                      <img src={BinIcon} className="w-4 h-4" alt="" />
+                    </td>
+                    {route.trash.map((trash, i) => {
+                      if (trash === "O")
+                        return (
+                          <td className="border px-4" key={i}>
+                            &#9711;
+                          </td>
+                        );
+                      if (trash === "X")
+                        return (
+                          <td className="border px-4" key={i}>
+                            &#9587;
+                          </td>
+                        );
+                    })}
+                  </tr>
+                  <tr>
+                    <td className="border px-4">&#9851;</td>
+                    {route.recycle.map((recycle, i) => {
+                      if (recycle === "X")
+                        return (
+                          <td className="border px-4" key={i}>
+                            &#9587;
+                          </td>
+                        );
+                      if (recycle !== "X")
+                        return (
+                          <td className="border px-1" key={i}>
+                            {recycle}
+                          </td>
+                        );
+                    })}
+                  </tr>
+                </tbody>
               </table>
             </div>
           );

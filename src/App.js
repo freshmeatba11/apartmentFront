@@ -10,13 +10,17 @@ import {
   RecyclePageComponent,
   InstructionsPageComponent,
   UtilityBillPageComponent,
+  UtilityBillPostPageComponent,
+  // NotificationPageComponent,
+  // NotificationPostPageComponent,
   LoginPageComponent,
   SignupPageComponent,
   NotMatchComponent,
 } from "./components";
+import AuthService from "./services/auth.service";
 
 function App() {
-  const [currentUser, setCurrentUser] = useState(null);
+  const [currentUser, setCurrentUser] = useState(AuthService.getCurrentUser);
 
   return (
     <div>
@@ -29,7 +33,10 @@ function App() {
           element={<RoomDetailPageComponent />}
         ></Route>
         <Route path={"/space"} element={<SpacePageComponent />}></Route>
-        <Route path={"/info"} element={<InfoPageComponent />}></Route>
+        <Route
+          path={"/info"}
+          element={<InfoPageComponent currentUser={currentUser} />}
+        ></Route>
         <Route
           path={"/info/recycle"}
           element={<RecyclePageComponent />}
@@ -38,7 +45,41 @@ function App() {
           path={"/info/instructions"}
           element={<InstructionsPageComponent />}
         ></Route>
-        {/* <Route path={"/utility"} element={<UtilityBillPageComponent />}></Route> */}
+        <Route
+          path={"/info/utility"}
+          element={<UtilityBillPageComponent currentUser={currentUser} />}
+        ></Route>
+        <Route
+          path={"/info/utility/post"}
+          element={<UtilityBillPostPageComponent currentUser={currentUser} />}
+        ></Route>
+        {/* <Route
+          path={"/info/notification"}
+          element={
+            <NotificationPageComponent
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route>
+        <Route
+          path={"/info/notification/post"}
+          element={
+            <NotificationPostPageComponent
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route> */}
+        {/* <Route
+          path={"/info/notification/edit"}
+          element={
+            <NotificationEditPageComponent
+              currentUser={currentUser}
+              setCurrentUser={setCurrentUser}
+            />
+          }
+        ></Route> */}
         <Route
           path={"/login"}
           element={

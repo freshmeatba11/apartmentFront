@@ -41,10 +41,10 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
 
       <div
         className={clsx(
-          "w-[80%] p-6 mx-auto bg-gray-700/40 rounded-lg",
-          "text-white",
-          "flex flex-col gap-3",
-          "lg:w-1/2"
+          "mx-auto w-[80%] p-6 rounded-lg",
+          "bg-black/40 text-white",
+          "flex flex-col gap-6",
+          "lg:w-1/2 xl:w-2/5 2xl:w-1/3"
         )}
       >
         <div className="flex flex-col gap-1">
@@ -52,7 +52,7 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
             Email :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="py-1 px-3 rounded bg-black/90"
             id="email"
             type="email"
             onChange={handleChangeEmail}
@@ -63,7 +63,7 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
             Password :
           </label>
           <input
-            className="bg-black bg-opacity-40 py-1 px-3 rounded"
+            className="py-1 px-3 rounded bg-black/90"
             id="password"
             type="text"
             onChange={handleChangePassword}
@@ -71,7 +71,7 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
         </div>
         <button
           className={clsx(
-            "w-1/2 block p-2 mx-auto text-black bg-white bg-opacity-90 rounded "
+            "block mx-auto w-1/2 p-2 rounded bg-white/90 text-black"
           )}
           onClick={handleLogin}
         >

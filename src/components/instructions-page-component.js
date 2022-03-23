@@ -66,7 +66,7 @@ export const InstructionsPageComponent = () => {
         textColor="text-white"
       />
       <div className={clsx("w-3/4 mx-auto grid gap-1")}>
-        {instructionList.map((data) => {
+        {instructionList.map((data, i) => {
           return (
             <div
               className={clsx(
@@ -76,14 +76,18 @@ export const InstructionsPageComponent = () => {
                 "hover:h-[200px] ",
                 "overflow-hidden transition-all duration-500"
               )}
+              key={i}
             >
               <div className="flex justify-between">
                 <span className="">{data.device}</span>
                 <span className="text-white text-opacity-70">&#9660;</span>
               </div>
-              {data.instruction.map((source) => {
+              {data.instruction.map((source, i) => {
                 return (
-                  <button className="block pt-4 cursor-pointer underline underline-offset-4">
+                  <button
+                    className="block pt-4 cursor-pointer underline underline-offset-4"
+                    key={i}
+                  >
                     <a href={source.link}>{source.title} &#8629;</a>
                   </button>
                 );
