@@ -11,8 +11,10 @@ import {
   InstructionsPageComponent,
   UtilityBillPageComponent,
   UtilityBillPostPageComponent,
-  // NotificationPageComponent,
-  // NotificationPostPageComponent,
+  NotificationPageComponent,
+  NotificationDetailPageComponent,
+  NotificationPostPageComponent,
+  NotificationEditPageComponent,
   LoginPageComponent,
   SignupPageComponent,
   NotMatchComponent,
@@ -53,33 +55,24 @@ function App() {
           path={"/info/utility/post"}
           element={<UtilityBillPostPageComponent currentUser={currentUser} />}
         ></Route>
-        {/* <Route
+        <Route
           path={"/info/notification"}
+          element={<NotificationPageComponent currentUser={currentUser} />}
+        ></Route>
+        <Route
+          path={"/info/notification/:_id"}
           element={
-            <NotificationPageComponent
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-            />
+            <NotificationDetailPageComponent currentUser={currentUser} />
           }
         ></Route>
         <Route
           path={"/info/notification/post"}
-          element={
-            <NotificationPostPageComponent
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-            />
-          }
-        ></Route> */}
-        {/* <Route
-          path={"/info/notification/edit"}
-          element={
-            <NotificationEditPageComponent
-              currentUser={currentUser}
-              setCurrentUser={setCurrentUser}
-            />
-          }
-        ></Route> */}
+          element={<NotificationPostPageComponent currentUser={currentUser} />}
+        ></Route>
+        <Route
+          path={"/info/notification/edit/:_id"}
+          element={<NotificationEditPageComponent currentUser={currentUser} />}
+        ></Route>
         <Route
           path={"/login"}
           element={

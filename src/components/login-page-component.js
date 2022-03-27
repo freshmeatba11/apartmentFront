@@ -27,7 +27,7 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
         window.alert(
           "Login successfully, you are now redirected to the notification page."
         );
-        navigate("/notification");
+        navigate("/info/notification");
       })
       .catch((error) => {
         console.log(error.response);
