@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import AuthService from "../services/auth.service";
 import TitleComponent from "./title-component";
 import ErrorMessageComponent from "./error-message-component";
+import FooterComponent from "./footer-component";
 
 export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
   const navigate = useNavigate();
@@ -25,9 +26,9 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
         }
         setCurrentUser(AuthService.getCurrentUser());
         window.alert(
-          "Login successfully, you are now redirected to the notification page."
+          "Login successfully, you are now redirected to the info page."
         );
-        navigate("/info/notification");
+        navigate("/info");
       })
       .catch((error) => {
         console.log(error.response);
@@ -78,6 +79,8 @@ export const LoginPageComponent = ({ currentUser, setCurrentUser }) => {
           Send
         </button>
       </div>
+
+      <FooterComponent color="white" />
     </div>
   );
 };

@@ -5,6 +5,7 @@ import TitleComponent from "./title-component";
 import MustLoginComponent from "./must-login-component";
 import ErrorMessageComponent from "./error-message-component";
 import UtilityBillService from "../services/utility-bill.service";
+import FooterComponent from "./footer-component";
 
 export const UtilityBillPostPageComponent = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -372,6 +373,8 @@ export const UtilityBillPostPageComponent = ({ currentUser }) => {
           </button>
         </div>
       )}
+
+      <FooterComponent color="white" />
     </div>
   );
 };

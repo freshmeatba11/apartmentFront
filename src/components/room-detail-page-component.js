@@ -3,6 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import TitleComponent from "./title-component";
 import ImageSwitchComponent from "./image-switch-component";
 import { imageList } from "../assets/images";
+import FooterComponent from "./footer-component";
 
 export const RoomDetailPageComponent = () => {
   const [currentRoom, setCurrentRoom] = useState("A");
@@ -28,9 +29,10 @@ export const RoomDetailPageComponent = () => {
 
   return (
     <>
-      <TitleComponent text={`Room ${currentRoom} 室內空間 /`} />
+      <TitleComponent text="室內空間" text02={` Room ${currentRoom} /`} />
       <ImageSwitchComponent images={featuredImages} />
-      <div className="w-full h-12"></div>
+
+      <FooterComponent />
     </>
   );
 };

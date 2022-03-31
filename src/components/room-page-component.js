@@ -2,6 +2,8 @@ import React from "react";
 import clsx from "clsx";
 import { imageList } from "../assets/images";
 import TitleComponent from "./title-component";
+import ImageSwitchComponent from "./image-switch-component";
+import FooterComponent from "./footer-component";
 
 function Card({ imageSource, route }) {
   return (
@@ -36,8 +38,8 @@ export const RoomPageComponent = () => {
       <div
         className={clsx(
           "pb-10",
-          "grid gap-6 justify-center grid-flow-row",
-          "lg:grid-flow-col lg:grid-rows-2"
+          "grid gap-6 grid-flow-row justify-center justify-items-center",
+          "lg:grid-cols-2"
         )}
       >
         <Card imageSource={imageList.a[0]} route="/room/a" />
@@ -45,6 +47,11 @@ export const RoomPageComponent = () => {
         <Card imageSource={imageList.c[1]} route="/room/c" />
         <Card imageSource={imageList.d[0]} route="/room/d" />
       </div>
+
+      <TitleComponent text="公共空間" text02=" Space /" />
+      <ImageSwitchComponent images={imageList.p} />
+
+      <FooterComponent />
     </>
   );
 };

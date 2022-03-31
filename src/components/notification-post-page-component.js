@@ -5,6 +5,7 @@ import TitleComponent from "./title-component";
 import MustLoginComponent from "./must-login-component";
 import ErrorMessageComponent from "./error-message-component";
 import PostService from "../services/post.service";
+import FooterComponent from "./footer-component";
 
 export const NotificationPostPageComponent = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -112,6 +113,8 @@ export const NotificationPostPageComponent = ({ currentUser }) => {
           </button>
         </div>
       )}
+
+      <FooterComponent color="white" />
     </div>
   );
 };

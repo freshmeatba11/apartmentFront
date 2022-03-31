@@ -6,6 +6,7 @@ import MustLoginComponent from "./must-login-component";
 import CreateButtonComponent from "./create-button-component";
 import PostService from "../services/post.service";
 import { ReactComponent as ArrowSvg } from "../assets/images/arrow.svg";
+import FooterComponent from "./footer-component";
 
 export const NotificationPageComponent = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -95,6 +96,8 @@ export const NotificationPageComponent = ({ currentUser }) => {
             })}
           </div>
         )}
+
+        <FooterComponent color="white" />
       </div>
     </>
   );

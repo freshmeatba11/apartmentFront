@@ -5,6 +5,7 @@ import TitleComponent from "./title-component";
 import MustLoginComponent from "./must-login-component";
 import CreateButtonComponent from "./create-button-component";
 import UtilityBillService from "../services/utility-bill.service";
+import FooterComponent from "./footer-component";
 
 export const UtilityBillPageComponent = ({ currentUser }) => {
   const navigate = useNavigate();
@@ -246,6 +247,8 @@ export const UtilityBillPageComponent = ({ currentUser }) => {
           })}
         </div>
       )}
+
+      <FooterComponent color="white" />
     </div>
   );
 };

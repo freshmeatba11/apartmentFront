@@ -5,7 +5,6 @@ import {
   HomeComponent,
   RoomPageComponent,
   RoomDetailPageComponent,
-  SpacePageComponent,
   InfoPageComponent,
   RecyclePageComponent,
   InstructionsPageComponent,
@@ -34,7 +33,6 @@ function App() {
           path={"/room/:roomNumber"}
           element={<RoomDetailPageComponent />}
         ></Route>
-        <Route path={"/space"} element={<SpacePageComponent />}></Route>
         <Route
           path={"/info"}
           element={<InfoPageComponent currentUser={currentUser} />}
@@ -82,7 +80,10 @@ function App() {
             />
           }
         ></Route>
-        <Route path={"/signup"} element={<SignupPageComponent />}></Route>
+        <Route
+          path={"/signup"}
+          element={<SignupPageComponent currentUser={currentUser} />}
+        ></Route>
         <Route path={"*"} element={<NotMatchComponent />}></Route>
       </Routes>
     </div>

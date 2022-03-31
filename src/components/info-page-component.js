@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import TitleComponent from "./title-component";
 import { useNavigate } from "react-router-dom";
+import FooterComponent from "./footer-component";
 
 const Card = ({ text01, text02, path, fake }) => {
   const navigate = useNavigate();
@@ -101,6 +102,8 @@ export const InfoPageComponent = ({ currentUser }) => {
 
         {/* <Card text01="生活機能" text02="" path="/info" /> */}
       </div>
+
+      <FooterComponent color="white" />
     </div>
   );
 };

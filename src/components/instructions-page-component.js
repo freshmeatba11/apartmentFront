@@ -1,6 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import TitleComponent from "./title-component";
+import FooterComponent from "./footer-component";
 
 export const InstructionsPageComponent = () => {
   const instructionList = [
@@ -96,6 +97,7 @@ export const InstructionsPageComponent = () => {
           );
         })}
       </div>
+      <FooterComponent color="white" />
     </div>
   );
 };

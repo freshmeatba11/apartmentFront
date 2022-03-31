@@ -33,25 +33,26 @@ export const Nav = ({ currentUser, setCurrentUser }) => {
   return (
     <div
       className={clsx(
-        "bg-[#9B826B] shadow-md",
-        "px-4 py-4",
-        "flex items-center",
-        "sticky top-0 z-50"
+        "sticky top-0 z-50",
+        "h-[10vh]",
+        "px-4 py-4 bg-[#9B826B] shadow-md",
+        "flex items-center"
       )}
     >
       <div>
         <img src={Logo} alt="" className="min-w-[64px] h-16" />
       </div>
-      <ul className="flex pl-2 flex-wrap gap-y-1 gap-x-6">
+      <ul className="flex flex-wrap gap-y-1 gap-x-6 pl-2">
         <NavLiComponent to="/room" text="Room" />
-        <NavLiComponent to="/space" text="Space" />
         <NavLiComponent to="/info" text="Info" />
         {!currentUser && (
           <>
-            <NavLiComponent to="/reservation" text="Reservation" />
             <NavLiComponent to="/login" text="Login" />
-            <NavLiComponent to="/signup" text="Sign Up" />
+            <NavLiComponent to="/reserve" text="Reserve" />
           </>
+        )}
+        {currentUser && currentUser.user.role !== "roommate" && (
+          <NavLiComponent to="/signup" text="Sign Up" />
         )}
         {currentUser && (
           <li

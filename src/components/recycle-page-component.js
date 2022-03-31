@@ -2,6 +2,7 @@ import React from "react";
 import clsx from "clsx";
 import TitleComponent from "./title-component";
 import BinIcon from "../assets/images/bin.png";
+import FooterComponent from "./footer-component";
 
 export const RecyclePageComponent = () => {
   const Schedule = [
@@ -48,7 +49,7 @@ export const RecyclePageComponent = () => {
       <div
         className={clsx(
           "w-screen",
-          "grid gap-4 ",
+          "grid gap-4",
           "lg:grid-flow-col lg:grid-cols-2 lg:grid-rows-3 lg:gap-8"
         )}
       >
@@ -112,6 +113,8 @@ export const RecyclePageComponent = () => {
           );
         })}
       </div>
+
+      <FooterComponent color="white" />
     </div>
   );
 };

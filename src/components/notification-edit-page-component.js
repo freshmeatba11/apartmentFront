@@ -5,6 +5,7 @@ import TitleComponent from "./title-component";
 import MustLoginComponent from "./must-login-component";
 import ErrorMessageComponent from "./error-message-component";
 import PostService from "../services/post.service";
+import FooterComponent from "./footer-component";
 
 export const NotificationEditPageComponent = ({ currentUser }) => {
   let params = useParams();
@@ -165,6 +166,8 @@ export const NotificationEditPageComponent = ({ currentUser }) => {
           </button>
         </div>
       )}
+
+      <FooterComponent color="white" />
     </div>
   );
 };

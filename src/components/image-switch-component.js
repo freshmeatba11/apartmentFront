@@ -48,7 +48,7 @@ const ImageSwitchComponent = ({ images }) => {
   };
 
   return (
-    <div className="max-w-screen-xl w-11/12 mx-auto">
+    <div className="max-w-screen-xl w-11/12 mx-auto mb-20">
       <div ref={slideRef} className="w-full relative select-none">
         <div className="aspect-video flex justify-center relative">
           <SwitchButton direction="previous" handler={handleOnPrevClick} />
