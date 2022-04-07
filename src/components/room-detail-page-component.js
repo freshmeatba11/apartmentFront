@@ -12,6 +12,7 @@ export const RoomDetailPageComponent = () => {
 
   useEffect(() => {
     setCurrentRoom(params.roomNumber.toUpperCase());
+    // eslint-disable-next-line
   }, []);
 
   let featuredImages = [];

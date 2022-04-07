@@ -12,6 +12,7 @@ export const SignupPageComponent = ({ currentUser }) => {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  // eslint-disable-next-line
   const [role, setRole] = useState("roommate");
   const [message, setMessage] = useState("");
 

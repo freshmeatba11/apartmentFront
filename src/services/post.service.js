@@ -1,6 +1,6 @@
 import axios from "axios";
 const API_URL =
-  `${process.env.API}/api/posts` || "http://localhost:8080/api/posts";
+  `${process.env.REACT_APP_API}/api/posts` || "http://localhost:8080/api/posts";
 
 class PostService {
   post(title, content, important) {

@@ -14,6 +14,7 @@ export const ReservePageComponent = () => {
           frameBorder="0"
           marginHeight="0"
           marginWidth="0"
+          title="reserveForm"
         >
           載入中…
         </iframe>

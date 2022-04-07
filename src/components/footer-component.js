@@ -3,8 +3,8 @@ import clsx from "clsx";
 
 const FooterComponent = ({ color }) => {
   let linkTo = "https://github.com/freshmeatba11";
-  if (process.env.profileLink) {
-    linkTo = process.env.profileLink;
+  if (process.env.REACT_APP_profileLink) {
+    linkTo = process.env.REACT_APP_profileLink;
   }
   return (
     <div

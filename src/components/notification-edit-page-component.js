@@ -79,6 +79,7 @@ export const NotificationEditPageComponent = ({ currentUser }) => {
       .catch((error) => {
         console.log(error);
       });
+    // eslint-disable-next-line
   }, []);
 
   return (

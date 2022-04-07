@@ -63,6 +63,7 @@ export const NotificationDetailPageComponent = ({ currentUser }) => {
       .catch((error) => {
         console.log(error);
       });
+    // eslint-disable-next-line
   }, []);
   return (
     <div className="infoPage">

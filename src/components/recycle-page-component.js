@@ -81,6 +81,7 @@ export const RecyclePageComponent = () => {
                     <td className="border px-4">
                       <img src={BinIcon} className="w-4 h-4" alt="" />
                     </td>
+                    {/* eslint-disable-next-line */}
                     {route.trash.map((trash, i) => {
                       if (trash === "O")
                         return (
@@ -98,6 +99,7 @@ export const RecyclePageComponent = () => {
                   </tr>
                   <tr>
                     <td className="border px-4">&#9851;</td>
+                    {/* eslint-disable-next-line */}
                     {route.recycle.map((recycle, i) => {
                       if (recycle === "X")
                         return (
