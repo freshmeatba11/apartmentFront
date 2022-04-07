@@ -11,14 +11,17 @@ function Card({ imageSource, route }) {
       className={clsx(
         "w-[80vw] rounded-lg overflow-hidden",
         "bg-gray-400 shadow-md drop-shadow-md",
-        "lg:w-[40vw]"
+        "lg:w-[40vw]",
+        "relative"
+        // "group relative"
       )}
     >
       <a
         href={route ? route : "/"}
         className={clsx(
           "cursor-pointer block w-full h-full",
-          "hover:-translate-y-1 hover:scale-105 transition-transform"
+          "hover:-translate-y-1 hover:scale-105 transition-transform duration-300",
+          "peer"
         )}
       >
         <img
@@ -27,6 +30,16 @@ function Card({ imageSource, route }) {
           className="w-full h-full object-cover brightness-110"
         />
       </a>
+      <div
+        className={clsx(
+          "w-full h-full bg-black absolute top-0 left-0",
+          "flex justify-center items-center",
+          "transition-all duration-300 ease-linear pointer-events-none",
+          "opacity-0 peer-hover:opacity-50 "
+        )}
+      >
+        <p className="text-white text-7xl">{route.slice(6).toUpperCase()}.</p>
+      </div>
     </div>
   );
 }

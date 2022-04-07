@@ -55,7 +55,13 @@ export const RecyclePageComponent = () => {
       >
         {Schedule.map((route, i) => {
           return (
-            <div className={clsx("w-[393px] mx-auto")} key={i}>
+            <div
+              className={clsx(
+                "w-[393px] mx-auto scale-90 -translate-x-3",
+                "sm:scale-100 sm:translate-x-0"
+              )}
+              key={i}
+            >
               <div className={clsx("text-white py-1")}>
                 {route.time + " " + route.name}
               </div>

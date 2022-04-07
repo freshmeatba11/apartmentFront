@@ -2,6 +2,10 @@ import React from "react";
 import clsx from "clsx";
 
 const FooterComponent = ({ color }) => {
+  let linkTo = "https://github.com/freshmeatba11";
+  if (process.env.profileLink) {
+    linkTo = process.env.profileLink;
+  }
   return (
     <div
       className={clsx(
@@ -17,8 +21,7 @@ const FooterComponent = ({ color }) => {
         )}
       />
       <div className="tracking-[.1em]">
-        Copyright © 2022{" "}
-        <a href="https://github.com/freshmeatba11">meatba11&#8629;</a>
+        Copyright © 2022 <a href={linkTo}>meatba11&#8629;</a>
       </div>
     </div>
   );

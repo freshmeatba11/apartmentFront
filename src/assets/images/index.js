@@ -1,4 +1,3 @@
-import testHome01 from "./testHome01.jpg";
 import a01 from "./a/a01.jpg";
 import a02 from "./a/a02.jpg";
 import a03 from "./a/a03.jpg";
@@ -37,7 +36,24 @@ import kitchen02 from "./p/kitchen02.JPG";
 import kitchen03 from "./p/kitchen03.JPG";
 import living01 from "./p/living01.JPG";
 import living02 from "./p/living02.JPG";
-
+import home01 from "./home/home01.jpeg";
+import home02 from "./home/home02.jpeg";
+import home03 from "./home/home03.jpeg";
+import home04 from "./home/home04.jpeg";
+import home05 from "./home/home05.jpeg";
+import home06 from "./home/home06.jpeg";
+import home07 from "./home/home07.jpeg";
+import home08 from "./home/home08.jpeg";
+import home09 from "./home/home09.jpeg";
+import home10 from "./home/home10.jpeg";
+import home11 from "./home/home11.jpeg";
+import home12 from "./home/home12.jpeg";
+import home13 from "./home/home13.jpeg";
+import home14 from "./home/home14.jpeg";
+import home15 from "./home/home15.jpeg";
+import home16 from "./home/home16.jpeg";
+import home17 from "./home/home17.jpeg";
+import home18 from "./home/home18.jpeg";
 export const imageList = {
   a: [a01, a02, a03, a04, a05, a06],
   b: [b01, b02, b03, b04, b05, b06, b07, b08],
@@ -54,6 +70,24 @@ export const imageList = {
     bathroom01,
     bathroom02,
   ],
-
-  testHome01: testHome01,
+  home: [
+    home01,
+    home02,
+    home03,
+    home04,
+    home05,
+    home06,
+    home07,
+    home08,
+    home09,
+    home10,
+    home11,
+    home12,
+    home13,
+    home14,
+    home15,
+    home16,
+    home17,
+    home18,
+  ],
 };

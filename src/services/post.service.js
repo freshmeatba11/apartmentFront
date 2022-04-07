@@ -1,5 +1,6 @@
 import axios from "axios";
-const API_URL = "http://localhost:8080/api/posts";
+const API_URL =
+  `${process.env.API}/api/posts` || "http://localhost:8080/api/posts";
 
 class PostService {
   post(title, content, important) {

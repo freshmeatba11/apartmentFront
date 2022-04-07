@@ -14,6 +14,7 @@ import {
   NotificationDetailPageComponent,
   NotificationPostPageComponent,
   NotificationEditPageComponent,
+  ReservePageComponent,
   LoginPageComponent,
   SignupPageComponent,
   NotMatchComponent,
@@ -71,6 +72,7 @@ function App() {
           path={"/info/notification/edit/:_id"}
           element={<NotificationEditPageComponent currentUser={currentUser} />}
         ></Route>
+        <Route path={"/reserve"} element={<ReservePageComponent />}></Route>
         <Route
           path={"/login"}
           element={

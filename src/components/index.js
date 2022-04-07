@@ -12,5 +12,6 @@ export * from "./notification-page-component";
 export * from "./notification-detail-page-component";
 export * from "./notification-post-page-component";
 export * from "./notification-edit-page-component";
+export * from "./reserve-page-component";
 export * from "./login-page-component";
 export * from "./signup-page-component";

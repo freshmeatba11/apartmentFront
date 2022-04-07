@@ -4,7 +4,7 @@ import clsx from "clsx";
 const TitleComponent = ({ text, text02, textColor }) => {
   return (
     <>
-      <div className="pl-12 py-8 md:pl-24 md:py-16">
+      <div className="px-12 py-8 md:pl-24 md:py-16">
         <span
           className={clsx(
             textColor ? textColor : "text-stone-600",

@@ -40,7 +40,14 @@ export const Nav = ({ currentUser, setCurrentUser }) => {
       )}
     >
       <div>
-        <img src={Logo} alt="" className="min-w-[64px] h-16" />
+        <img
+          src={Logo}
+          alt=""
+          className="min-w-[64px] h-16 cursor-pointer"
+          onClick={() => {
+            navigate("/");
+          }}
+        />
       </div>
       <ul className="flex flex-wrap gap-y-1 gap-x-6 pl-2">
         <NavLiComponent to="/room" text="Room" />
