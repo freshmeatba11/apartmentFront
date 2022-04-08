@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import clsx from "clsx";
 import { imageList } from "../assets/images";
 import TitleComponent from "./title-component";
@@ -16,8 +17,8 @@ function Card({ imageSource, route }) {
         // "group relative"
       )}
     >
-      <a
-        href={route ? route : "/"}
+      <Link
+        to={route ? route : "/"}
         className={clsx(
           "cursor-pointer block w-full h-full",
           "hover:-translate-y-1 hover:scale-105 transition-transform duration-300",
@@ -29,7 +30,7 @@ function Card({ imageSource, route }) {
           alt=""
           className="w-full h-full object-cover brightness-110"
         />
-      </a>
+      </Link>
       <div
         className={clsx(
           "w-full h-full bg-black absolute top-0 left-0",
