@@ -1,7 +1,8 @@
 import axios from "axios";
-const API_URL =
-  `${process.env.REACT_APP_API}/api/utilitybill` ||
-  "http://localhost:8080/api/utilitybill";
+let API_URL = "http://localhost:8080/api/utilitybill";
+if (process.env.NODE_ENV === "production") {
+  API_URL = `${process.env.REACT_APP_API}/api/utilitybill`;
+}
 
 class UtilityBillService {
   post(

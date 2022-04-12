@@ -197,16 +197,18 @@ export const UtilityBillPageComponent = ({ currentUser }) => {
                 </p>
               </div>
             </div>
-            <button
-              className={clsx(
-                "block mx-auto py-2 px-[1.6rem] rounded-3xl",
-                "bg-red-500 text-[1.125rem]"
-              )}
-              id={id}
-              onClick={handleDelete}
-            >
-              刪除
-            </button>
+            {currentUser && currentUser.user.role !== "roommate" && (
+              <button
+                className={clsx(
+                  "block mx-auto py-2 px-[1.6rem] rounded-3xl",
+                  "bg-red-500 text-[1.125rem]"
+                )}
+                id={id}
+                onClick={handleDelete}
+              >
+                刪除
+              </button>
+            )}
           </div>
           <div
             className={clsx(
