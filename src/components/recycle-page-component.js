@@ -1,7 +1,7 @@
 import React from "react";
 import clsx from "clsx";
 import TitleComponent from "./title-component";
-import BinIcon from "../assets/images/bin.png";
+import BinIcon from "../assets/images/bin.webp";
 import FooterComponent from "./footer-component";
 
 export const RecyclePageComponent = () => {

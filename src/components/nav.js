@@ -3,7 +3,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import clsx from "clsx";
 import AuthService from "../services/auth.service";
 
-import Logo from "../assets/images/logo.png";
+import Logo from "../assets/images/logo.webp";
 
 const NavLiComponent = ({ to, text }) => {
   return (
