@@ -18,7 +18,7 @@ body {
 }
 
 .infoPage {
-  background-image: url("./assets/images/info.JPG");
+  background-image: url("./assets/images/info.jpg");
   @apply bg-no-repeat bg-center bg-blend-multiply bg-neutral-900/50
         h-[90vh]
         overflow-y-scroll;
