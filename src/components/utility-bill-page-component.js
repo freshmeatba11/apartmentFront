@@ -59,6 +59,14 @@ export const UtilityBillPageComponent = ({ currentUser }) => {
   }, []);
 
   const DataForm = ({ data, id }) => {
+    const titleYear = data.title.slice(0, 4);
+    let titleMonth = data.title.slice(4);
+    // check if month only has one digit
+    if (titleMonth.length === 1) {
+      titleMonth = `0${titleMonth}`;
+    }
+    const formTitle = `${titleYear}.${titleMonth}月`;
+
     const roomAUsage = data.roomA.currentDegree - data.roomA.previousDegree;
     const roomBUsage = data.roomB.currentDegree - data.roomB.previousDegree;
     const roomCUsage = data.roomC.currentDegree - data.roomC.previousDegree;
@@ -83,7 +91,7 @@ export const UtilityBillPageComponent = ({ currentUser }) => {
             )}
           >
             <div>
-              <p className="mb-3 font-black text-lg">{data.title}</p>
+              <p className="mb-3 font-black text-lg">{formTitle}</p>
               <p className="text-white/80 text-sm">
                 <span>抄表日期 : </span>
                 <span>{data.recordDate.slice(0, 10)}</span>

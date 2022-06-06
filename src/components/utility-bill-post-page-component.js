@@ -143,7 +143,7 @@ export const UtilityBillPostPageComponent = ({ currentUser }) => {
               name="title"
               id="title"
               type="text"
-              placeholder="YYYY-MM"
+              placeholder="YYYYMM"
               onChange={handleChangeTitle}
             />
           </div>
